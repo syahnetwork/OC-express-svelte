@@ -201,20 +201,27 @@
       </Table>
     </div>
   </div>
+
   <Modal isOpen={addopen} {addtoggle}>
     <ModalHeader {addtoggle}>Add a new participant</ModalHeader>
     <ModalBody>
-      <Label for="newTitle">Label:</Label>
+      <Label for="">Label:</Label>
       <Input
         type="text"
         bind:value={addParticipantForm.label}
         placeholder="addParticipantForm.label" />
       <p />
-      <Label for="newAuthor">study_id:</Label>
-      <Input
+      <Label for="">study_id:</Label>
+      <!-- <Input
         type="text"
         bind:value={addParticipantForm.study_id}
-        placeholder="addParticipantForm.study_id" />
+        placeholder="addParticipantForm.study_id" /> -->
+
+      <select name="" id="" bind:value={addParticipantForm.study_id}>
+        {#each participants as participant}
+          <option value={participant.study_id}>{participant.study_id}</option>
+        {/each}
+      </select>
       <p />
       <Label for="newTitle">subject_id:</Label>
       <Input
@@ -245,19 +252,20 @@
       <Button color="secondary" on:click={addtoggle}>Cancel</Button>
     </ModalFooter>
   </Modal>
+
   <Modal isOpen={updateopen} {updatetoggle}>
     <ModalHeader {updatetoggle}>Update participant</ModalHeader>
     <ModalBody>
-      <Label for="newTitle">label:</Label>
+      <Label for="">label:</Label>
       <Input type="text" bind:value={editForm.label} placeholder="label" />
       <p />
-      <Label for="newAuthor">study_id:</Label>
+      <Label for="">study_id:</Label>
       <Input
         type="text"
         bind:value={editForm.study_id}
         placeholder="study_id" />
       <p />
-      <Label for="newTitle">subject_id:</Label>
+      <Label for="">subject_id:</Label>
       <Input
         type="text"
         bind:value={editForm.subject_id}
