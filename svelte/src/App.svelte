@@ -212,36 +212,32 @@
         placeholder="addParticipantForm.label" />
       <p />
       <Label for="">study_id:</Label>
-      <!-- <Input
-        type="text"
-        bind:value={addParticipantForm.study_id}
-        placeholder="addParticipantForm.study_id" /> -->
-
       <select name="" id="" bind:value={addParticipantForm.study_id}>
         {#each participants as participant}
           <option value={participant.study_id}>{participant.study_id}</option>
         {/each}
       </select>
       <p />
-      <Label for="newTitle">subject_id:</Label>
+      <Label for="">subject_id:</Label>
       <Input
         type="text"
         bind:value={addParticipantForm.subject_id}
         placeholder="addParticipantForm.subject_id" />
       <p />
-      <Label for="newTitle">status_id:</Label>
+      <Label for="">status_id:</Label>
       <Input
         type="text"
         bind:value={addParticipantForm.status_id}
         placeholder="addParticipantForm.status_id" />
       <p />
-      <Label for="newTitle">owner_id:</Label>
-      <Input
-        type="text"
-        bind:value={addParticipantForm.owner_id}
-        placeholder="addParticipantForm.owner_id" />
+      <Label for="">owner_id:</Label>
+      <select name="" id="" bind:value={addParticipantForm.owner_id}>
+        {#each participants as participant}
+          <option value={participant.owner_id}>{participant.owner_id}</option>
+        {/each}
+      </select>
       <p />
-      <Label for="newTitle">oc_oid:</Label>
+      <Label for="">oc_oid:</Label>
       <Input
         type="text"
         bind:value={addParticipantForm.oc_oid}
