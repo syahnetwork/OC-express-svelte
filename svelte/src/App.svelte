@@ -43,8 +43,6 @@
     });
   }
 
-  // getParticipants();
-
   function removeParticipant(participantId) {
     const path = `http://localhost:3000/participant/${participantId.participant.study_subject_id}`;
     axios

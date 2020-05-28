@@ -1,0 +1,1 @@
+28.05.2020 download and run dbschema application to visualize more clearly tables on openclinica database, build query with sophisticated relations, still looking solution for oc_oid error(unique index)
