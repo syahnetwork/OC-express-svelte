@@ -1,1 +1,2 @@
 28.05.2020 download and run dbschema application to visualize more clearly tables on openclinica database, build query with sophisticated relations, still looking solution for oc_oid error(unique index)
+29.05.2020 add delete route, trying many ways to solve problem "invalid input syntax for integer: """, trying casting data still not succeed , fill string in post form not succeed even though obeying the rules for the table :(

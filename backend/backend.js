@@ -22,6 +22,11 @@ router.post('', async (req, res) => {
   res.json(rows)
 })
 
+router.delete('/:id', async (req, res) => {
+  const { rows } = await postgres.query('DELETE FROM s_02052020test.study_subject WHERE study_subject_id=$1', [req.params.id])
+  res.json(rows)
+})
+
 app.listen(PORT, () => {
   console.log(`app is running on ${PORT}`)
 })
