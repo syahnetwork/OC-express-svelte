@@ -1,2 +1,4 @@
 28.05.2020 download and run dbschema application to visualize more clearly tables on openclinica database, build query with sophisticated relations, still looking solution for oc_oid error(unique index)
 29.05.2020 add delete route, trying many ways to solve problem "invalid input syntax for integer: """, trying casting data still not succeed , fill string in post form not succeed even though obeying the rules for the table :( , can't focus because my fiancee reintroducing opera song barber of seville FIGARO which is still playing in my head over and over while i'm coding smh
+30.05.2020 izin rehat / permission for taking a day leave
+31.05.2020 ask question on stackoverflow about POST data problem which is still haunting for days :(
