@@ -18,8 +18,13 @@ router.get('', async (req, res) => {
 
 router.post('', async (req, res) => {
   const { label, subject_id, study_id, status_id, owner_id, oc_oid } = req.body
-  const { rows } = await postgres.query('INSERT INTO s_02052020test.study_subject(label,subject_id,study_id,status_id,owner_id,oc_oid) VALUES($1,$2,$3,$4,$5,$6);', [label, subject_id, study_id, status_id, owner_id, oc_oid])
-  res.json(rows)
+  try {
+    const { rows } = await postgres.query('INSERT INTO s_02052020test.study_subject(label,subject_id,study_id,status_id,owner_id,oc_oid) VALUES($1,$2,$3,$4,$5,$6);', [label, subject_id, study_id, status_id, owner_id, oc_oid])
+    res.json(rows)
+  } catch (error) {
+    console.log('ERROR ', error)
+    res.sendStatus(500)
+  }
 })
 
 router.delete('/:id', async (req, res) => {
