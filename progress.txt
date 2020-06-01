@@ -3,3 +3,4 @@
 30.05.2020 izin rehat / permission for taking a day leave
 31.05.2020 ask question on stackoverflow about POST data problem which is still haunting for days :(
   link for question https://stackoverflow.com/questions/62114773/invalid-input-syntax-for-integer-for-column-varchar-with-unique-index-running-o
+01.06.2020 add try catch to method post for knowing spesific error , i'm planning make a new project structure tomorrow :)
