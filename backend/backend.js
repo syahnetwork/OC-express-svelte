@@ -17,10 +17,10 @@ router.get('', async (req, res) => {
 })
 
 router.post('', async (req, res) => {
-  const { label, subject_id, study_id, status_id, owner_id, oc_oid } = req.body
+  const { label, secondary_label, subject_id, study_id, status_id, enrollment_date, date_created, date_updated, owner_id, update_id, oc_oid, time_zone, user_id, user_status_id } = req.body
   try {
-    const { rows } = await postgres.query('INSERT INTO s_02052020test.study_subject(study_subject_id, label, secondary_label, subject_id, study_id, status_id, enrollment_date, date_created, date_updated, owner_id, update_id, oc_oid, time_zone, user_id, user_status_id) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15);', [study_subject_id, label, secondary_label, subject_id, study_id, status_id, enrollment_date, date_created, date_updated, owner_id, update_id, oc_oid, time_zone, user_id, user_status_id])
-    res.json(rows)
+    const { rows } = await postgres.query('INSERT INTO s_02052020test.study_subject( label, secondary_label, subject_id, study_id, status_id, enrollment_date, date_created, date_updated, owner_id, update_id, oc_oid, time_zone, user_id, user_status_id) VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14);', [label, secondary_label, subject_id, study_id, status_id, enrollment_date, date_created, date_updated, owner_id, update_id, oc_oid, time_zone, user_id, user_status_id])
+    res.json(rows + 'data inserted , great success!')
   } catch (error) {
     console.log('ERROR ', error)
     res.sendStatus(500)

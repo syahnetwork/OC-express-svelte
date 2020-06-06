@@ -20,10 +20,10 @@
 
   let addParticipantForm = {
     label: "",
-    subject_id: "",
-    study_id: "",
-    status_id: "",
-    owner_id: "",
+    subject_id: 0,
+    study_id: 0,
+    status_id: 0,
+    owner_id: 0,
     oc_oid: ""
   };
 
@@ -73,14 +73,24 @@
     editForm.oc_oid = "";
   }
 
+  const time = new Date().toISOString();
+
   function addParticipant() {
     const payload = {
       label: addParticipantForm.label,
-      study_id: addParticipantForm.study_id,
+      secondary_label: "",
       subject_id: addParticipantForm.subject_id,
-      subject_id: addParticipantForm.status_id,
-      subject_id: addParticipantForm.owner_id,
-      subject_id: addParticipantForm.oc_oid
+      study_id: addParticipantForm.study_id,
+      status_id: addParticipantForm.status_id,
+      enrollment_date: time,
+      date_created: time,
+      date_updated: time,
+      owner_id: addParticipantForm.owner_id,
+      update_id: null,
+      oc_oid: addParticipantForm.oc_oid,
+      time_zone: null,
+      user_id: null,
+      user_status_id: null
     };
     const path = "http://localhost:3000/participant/";
 
@@ -90,7 +100,7 @@
         getParticipants();
       })
       .catch(error => {
-        console.log(error);
+        console.log(error + JSON.stringify(payload));
         getParticipants();
       });
     addtoggle();
@@ -106,9 +116,9 @@
       label: editForm.label,
       study_id: editForm.study_id,
       subject_id: editForm.subject_id,
-      subject_id: editForm.status_id,
-      subject_id: editForm.owner_id,
-      subject_id: editForm.oc_oid
+      status_id: editForm.status_id,
+      owner_id: editForm.owner_id,
+      oc_oid: editForm.oc_oid
     };
     const path = `http://localhost:3000/participant/${editForm.study_subject_id}`;
 
@@ -212,25 +222,32 @@
       <Label for="">study_id:</Label>
       <select name="" id="" bind:value={addParticipantForm.study_id}>
         {#each participants as participant}
+          <option style="display:none;" />
           <option value={participant.study_id}>{participant.study_id}</option>
         {/each}
       </select>
       <p />
       <Label for="">subject_id:</Label>
-      <Input
-        type="text"
-        bind:value={addParticipantForm.subject_id}
-        placeholder="addParticipantForm.subject_id" />
+      <select name="" id="" bind:value={addParticipantForm.subject_id}>
+        {#each participants as participant}
+          <option style="display:none;" />
+          <option value={participant.subject_id}>
+            {participant.subject_id}
+          </option>
+        {/each}
+      </select>
       <p />
       <Label for="">status_id:</Label>
-      <Input
-        type="text"
-        bind:value={addParticipantForm.status_id}
-        placeholder="addParticipantForm.status_id" />
+      <select name="" id="" bind:value={addParticipantForm.status_id}>
+        <option style="display:none;" />
+        <option value="1">1</option>
+        <option value="0">0</option>
+      </select>
       <p />
       <Label for="">owner_id:</Label>
       <select name="" id="" bind:value={addParticipantForm.owner_id}>
         {#each participants as participant}
+          <option style="display:none;" />
           <option value={participant.owner_id}>{participant.owner_id}</option>
         {/each}
       </select>
