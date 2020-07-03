@@ -38,13 +38,13 @@
   };
 
   function getParticipants() {
-    axios.get("http://localhost:3000/participant/").then(res => {
+    axios.get("http://168.235.77.142:3000/participant/").then(res => {
       participants = res.data;
     });
   }
 
   function removeParticipant(participantId) {
-    const path = `http://localhost:3000/participant/${participantId.participant.study_subject_id}`;
+    const path = `http://168.235.77.142:3000/participant/${participantId.participant.study_subject_id}`;
     axios
       .delete(path)
       .then(() => {
@@ -92,7 +92,7 @@
       user_id: null,
       user_status_id: null
     };
-    const path = "http://localhost:3000/participant/";
+    const path = "http://168.235.77.142:3000/participant/";
 
     axios
       .post(path, payload)
@@ -120,7 +120,7 @@
       owner_id: editForm.owner_id,
       oc_oid: editForm.oc_oid
     };
-    const path = `http://localhost:3000/participant/${editForm.study_subject_id}`;
+    const path = `http://168.235.77.142:3000/participant/${editForm.study_subject_id}`;
 
     axios
       .put(path, payload)
