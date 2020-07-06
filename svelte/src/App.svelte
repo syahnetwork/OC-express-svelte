@@ -158,7 +158,8 @@
 <div>
   <div class="row">
     <div class="col-sm-12">
-      <h1>Open Clinica Participants</h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h1>Open Clinica Participants</h1></nav>
       <hr />
       <br />
       <Button color="success" on:click={addtoggle}>Add Participant</Button>
