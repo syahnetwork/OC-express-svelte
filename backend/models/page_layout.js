@@ -7,11 +7,11 @@ module.exports = sequelize => {
     page_layout_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(page_layout_page_layout_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "page_layout_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     name: {
       type: DataTypes.CHAR(255),

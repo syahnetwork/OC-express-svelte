@@ -1,0 +1,17 @@
+{
+  "dbOptions": {
+    "database": "openclinica",
+    "username": "clinica",
+    "password": "clinica",
+    "dialect": "postgresql",
+    "host": "localhost",
+    "port": 5432,
+    "logging": false,
+    "timestamps": false
+  },
+  "options": {
+    "type": "js",
+    "dir": "models",
+    "noModelSuffix": true
+  }
+}

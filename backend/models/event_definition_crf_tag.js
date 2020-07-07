@@ -7,11 +7,11 @@ module.exports = sequelize => {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(event_definition_crf_tag_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "id",
-      autoIncrement: true
+      autoIncrement: false
     },
     path: {
       type: DataTypes.CHAR(255),

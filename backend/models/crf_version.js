@@ -7,11 +7,11 @@ module.exports = sequelize => {
     crf_version_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(crf_version_crf_version_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "crf_version_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     crf_id: {
       type: DataTypes.INTEGER,

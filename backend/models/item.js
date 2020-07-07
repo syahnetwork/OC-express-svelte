@@ -7,11 +7,11 @@ module.exports = sequelize => {
     item_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(item_item_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "item_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     name: {
       type: DataTypes.CHAR(255),

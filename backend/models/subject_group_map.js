@@ -7,11 +7,11 @@ module.exports = sequelize => {
     subject_group_map_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(subject_group_map_subject_group_map_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "subject_group_map_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     study_group_class_id: {
       type: DataTypes.INTEGER,

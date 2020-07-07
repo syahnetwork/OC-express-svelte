@@ -7,11 +7,11 @@ module.exports = sequelize => {
     dc_event_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(dc_send_email_event_dc_event_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "dc_event_id",
-      autoIncrement: true,
+      autoIncrement: false,
       references: {
         key: "dc_event_id",
         model: "dc_event_model"

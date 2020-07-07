@@ -7,11 +7,11 @@ module.exports = sequelize => {
     completion_status_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(completion_status_completion_status_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "completion_status_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     status_id: {
       type: DataTypes.INTEGER,

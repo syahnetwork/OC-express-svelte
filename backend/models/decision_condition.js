@@ -7,11 +7,11 @@ module.exports = sequelize => {
     decision_condition_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(decision_condition_decision_condition_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "decision_condition_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     crf_version_id: {
       type: DataTypes.INTEGER,

@@ -7,11 +7,11 @@ module.exports = sequelize => {
     audit_log_event_type_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(audit_log_event_type_audit_log_event_type_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "audit_log_event_type_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     name: {
       type: DataTypes.CHAR(255),

@@ -7,11 +7,11 @@ module.exports = sequelize => {
     repeat_count_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(repeat_count_repeat_count_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "repeat_count_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     event_crf_id: {
       type: DataTypes.INTEGER,

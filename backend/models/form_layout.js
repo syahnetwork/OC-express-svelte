@@ -7,11 +7,11 @@ module.exports = sequelize => {
     form_layout_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(form_layout_form_layout_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "form_layout_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     crf_id: {
       type: DataTypes.INTEGER,

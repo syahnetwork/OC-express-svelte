@@ -7,11 +7,11 @@ module.exports = sequelize => {
     export_format_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(export_format_export_format_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "export_format_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     name: {
       type: DataTypes.CHAR(255),

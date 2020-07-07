@@ -7,11 +7,11 @@ module.exports = sequelize => {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(rule_action_run_log_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "id",
-      autoIncrement: true
+      autoIncrement: false
     },
     action_type: {
       type: DataTypes.INTEGER,

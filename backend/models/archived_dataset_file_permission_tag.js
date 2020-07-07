@@ -7,11 +7,11 @@ module.exports = sequelize => {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(archived_dataset_file_permission_tag_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "id",
-      autoIncrement: true
+      autoIncrement: false
     },
     archived_dataset_file_id: {
       type: DataTypes.INTEGER,

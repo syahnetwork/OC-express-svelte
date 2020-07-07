@@ -7,11 +7,11 @@ module.exports = sequelize => {
     study_parameter_value_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(study_parameter_value_study_parameter_value_id_seq::regclass)",
       comment: null,
       primaryKey: false,
       field: "study_parameter_value_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     study_id: {
       type: DataTypes.INTEGER,

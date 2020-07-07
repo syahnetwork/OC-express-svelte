@@ -7,11 +7,11 @@ module.exports = sequelize => {
     dataset_item_status_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(dataset_item_status_dataset_item_status_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "dataset_item_status_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     name: {
       type: DataTypes.CHAR(50),

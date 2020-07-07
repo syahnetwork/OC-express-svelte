@@ -7,11 +7,11 @@ module.exports = sequelize => {
     dc_summary_event_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(dc_computed_event_dc_summary_event_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "dc_summary_event_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     dc_event_id: {
       type: DataTypes.INTEGER,

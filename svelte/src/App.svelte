@@ -158,7 +158,7 @@
 <div>
   <div class="row">
     <div class="col-sm-12">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
     <h1>Open Clinica Participants</h1></nav>
       <hr />
       <br />

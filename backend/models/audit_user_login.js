@@ -7,11 +7,11 @@ module.exports = sequelize => {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(audit_user_login_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "id",
-      autoIncrement: true
+      autoIncrement: false
     },
     user_name: {
       type: DataTypes.CHAR(255),

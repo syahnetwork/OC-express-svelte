@@ -7,11 +7,11 @@ module.exports = sequelize => {
     discrepancy_note_type_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(discrepancy_note_type_discrepancy_note_type_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "discrepancy_note_type_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     name: {
       type: DataTypes.CHAR(50),

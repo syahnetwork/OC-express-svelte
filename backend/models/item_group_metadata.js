@@ -7,11 +7,11 @@ module.exports = sequelize => {
     item_group_metadata_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(item_group_metadata_item_group_metadata_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "item_group_metadata_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     item_group_id: {
       type: DataTypes.INTEGER,

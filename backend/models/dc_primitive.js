@@ -7,11 +7,11 @@ module.exports = sequelize => {
     dc_primitive_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(dc_primitive_dc_primitive_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "dc_primitive_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     decision_condition_id: {
       type: DataTypes.INTEGER,

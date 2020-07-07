@@ -7,11 +7,11 @@ module.exports = sequelize => {
     job_detail_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(job_detail_job_detail_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "job_detail_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     uuid: {
       type: DataTypes.CHAR(255),

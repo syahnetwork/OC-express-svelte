@@ -7,11 +7,11 @@ module.exports = sequelize => {
     response_set_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(response_set_response_set_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "response_set_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     response_type_id: {
       type: DataTypes.INTEGER,

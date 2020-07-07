@@ -7,11 +7,11 @@ module.exports = sequelize => {
     role_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: null,
+      defaultValue: "nextval(user_role_role_id_seq::regclass)",
       comment: null,
       primaryKey: true,
       field: "role_id",
-      autoIncrement: true
+      autoIncrement: false
     },
     role_name: {
       type: DataTypes.CHAR(64),
